@@ -1,0 +1,115 @@
+.categoryGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; /* Daha küçük bir boşluk */
+    margin-top: 25px;
+}
+
+.categoryName {
+    font-size: 36px;
+    margin-top: 50px;
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px; /* Aradaki boşlukları düzenleyin */
+    margin-top: 50px;
+}
+
+.movie {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    width: 230px; /* Film genişliğini belirleyin */
+    height: 380px; /* Film yüksekliğini belirleyin */
+}
+
+.movie:hover {
+    transform: scale(1.05);
+}
+
+.movie a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.movie a img {
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.movie:hover a img {
+    transform: scale(1.1);
+}
+
+.movieInfoOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.movie:hover .movieInfoOverlay {
+    opacity: 1;
+}
+
+.overlay {
+    padding: 15px; /* Daha küçük bir padding kullanın */
+    color: #fff;
+}
+
+.boxTitle {
+    font-size: 20px; /* Yazı boyutunu küçültün */
+    font-weight: 700;
+}
+
+.imdb {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Aralıkları küçültün */
+    margin-top: 10px;
+}
+
+.point {
+    font-size: 16px; /* Yazı boyutunu küçültün */
+    font-weight: 500;
+}
+
+.point span {
+    font-size: 14px; /* Yazı boyutunu küçültün */
+    font-weight: 400;
+}
+
+.categories, .year {
+    margin-top: 10px; /* Üst marjinleri küçültün */
+    font-size: 14px; /* Yazı boyutunu küçültün */
+}
+
+.overview {
+    margin-top: 10px; /* Üst marjini küçültün */
+    color: #b8b8b8;
+    font-size: 14px; /* Yazı boyutunu küçültün */
+}
+
+.shortOverview {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.saveIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

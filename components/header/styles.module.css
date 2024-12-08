@@ -1,0 +1,155 @@
+/* Header */
+.header {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 40%
+    );
+    z-index: -1;
+}
+
+.headerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    position: relative;
+}
+
+.navigationMenu {
+    display: flex;
+    gap: 40px;
+    letter-spacing: 2px;
+}
+.navigationMenu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.5s ease, font-weight 0.3s ease;
+}
+.navigationMenu a:hover {
+    font-weight: 600;
+    color: #ff7d41;
+}
+
+.responsivebtn{
+    display: none;
+}
+
+/* Search Input */
+.inputSearch {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: 0;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 40px 0 15px;
+    background-color: rgba(255, 255, 255, 0.25);
+    outline: none;
+    border: 2px solid transparent;
+    color: #fff;
+    transition: width 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    box-shadow: 0px 0px 15px 0px #000;
+    margin-left: 350px;
+    display: block; 
+}
+.input.show {
+    width: 300px; 
+    opacity: 1;
+}
+.input.hide {
+    width: 0;
+    opacity: 0;
+}
+
+.input:focus {
+    box-shadow: 0px 0px 10px 0px #ff7d41;
+}
+
+.search {
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 12px 12px;
+    position: absolute;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 0px #000;
+}
+
+/* Sign In Button */
+.signIn {
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.5s ease, color 0.5s ease;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 0px #000;
+    margin-right: 150px;
+}
+.signIn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+    box-shadow: 0px 0px 10px 0px #ff7d41;
+}
+
+.searchDropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.searchResult {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.searchResult:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.resultInfo {
+    margin-left: 10px;
+}
+.resultTitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+.resultReleaseDate {
+    font-size: 14px;
+    color: #ddd;
+}
+.resultTitle, .resultReleaseDate {
+    display: block;
+}
